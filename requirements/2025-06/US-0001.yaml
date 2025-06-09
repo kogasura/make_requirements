@@ -1,0 +1,9 @@
+id: US-0001
+summary: Sample user story
+acceptance:
+  - Given the system is running
+  - When the user performs an action
+  - Then the system responds accordingly
+priority: high
+trace:
+  - REQ-0001

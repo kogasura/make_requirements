@@ -1,0 +1,22 @@
+{
+  "type": "map",
+  "mapping": {
+    "id": {"type": "str", "required": true},
+    "summary": {"type": "str", "required": true},
+    "acceptance": {
+      "type": "seq",
+      "sequence": [
+        {"type": "str"}
+      ],
+      "required": true
+    },
+    "priority": {"type": "str", "required": true},
+    "trace": {
+      "type": "seq",
+      "sequence": [
+        {"type": "str"}
+      ],
+      "required": true
+    }
+  }
+}
