@@ -24,7 +24,8 @@ pip install -e .[dev,test]
 Run the following command to validate example requirements against the schema:
 
 ```bash
-pykwalify -d requirements/2025-06/US-0001.yaml -s requirements/schema/requirements.schema.json
+check-jsonschema requirements/2025-06/US-0001.yaml \
+  --schemafile requirements/schema/requirements.schema.json
 ```
 
 ### Run Tests

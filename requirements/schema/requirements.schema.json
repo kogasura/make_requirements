@@ -1,22 +1,19 @@
 {
-  "type": "map",
-  "mapping": {
-    "id": {"type": "str", "required": true},
-    "summary": {"type": "str", "required": true},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "summary": {"type": "string"},
     "acceptance": {
-      "type": "seq",
-      "sequence": [
-        {"type": "str"}
-      ],
-      "required": true
+      "type": "array",
+      "items": {"type": "string"}
     },
-    "priority": {"type": "str", "required": true},
+    "priority": {"type": "string"},
     "trace": {
-      "type": "seq",
-      "sequence": [
-        {"type": "str"}
-      ],
-      "required": true
+      "type": "array",
+      "items": {"type": "string"}
     }
-  }
+  },
+  "required": ["id", "summary", "acceptance", "priority", "trace"],
+  "additionalProperties": false
 }

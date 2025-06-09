@@ -4,7 +4,7 @@ version = "0.0.1"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pykwalify"]
+dev = ["jsonschema", "PyYAML", "check-jsonschema"]
 test = ["pytest"]
 
 [build-system]
