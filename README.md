@@ -1,0 +1,2 @@
+# make_requirements
+会議から議事録を作成し、議事録から要件定義やAction Planを作成する
