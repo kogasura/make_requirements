@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^REQ-\\d{4}$"
+    },
+    "summary": {"type": "string"},
+    "acceptance": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["High", "Medium", "Low"]
+    },
+    "trace": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["id", "summary", "acceptance", "priority", "trace"],
+  "additionalProperties": false
+}

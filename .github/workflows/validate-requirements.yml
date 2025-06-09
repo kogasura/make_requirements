@@ -1,0 +1,23 @@
+name: Validate Requirements
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli
+      - name: Validate YAML files
+        run: |
+          for file in requirements/**/*.yaml; do
+            ajv validate -d "$file" -s requirements/schema/requirements.schema.json || exit 1
+          done
